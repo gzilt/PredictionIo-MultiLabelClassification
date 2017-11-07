@@ -1,7 +1,4 @@
-package io.prediction.lingpipe;
-
-import java.nio.CharBuffer;
-import java.util.HashMap;
+package io.prediction.multilabel.classification;
 
 import org.apache.lucene.analysis.ar.ArabicNormalizer;
 import org.apache.lucene.analysis.ar.ArabicStemmer;
@@ -11,21 +8,10 @@ import org.carrot2.text.linguistic.IStemmerFactory;
 import org.carrot2.util.ReflectionUtils;
 import org.slf4j.Logger;
 import org.tartarus.snowball.SnowballProgram;
-import org.tartarus.snowball.ext.DanishStemmer;
-import org.tartarus.snowball.ext.DutchStemmer;
-import org.tartarus.snowball.ext.EnglishStemmer;
-import org.tartarus.snowball.ext.FinnishStemmer;
-import org.tartarus.snowball.ext.FrenchStemmer;
-import org.tartarus.snowball.ext.GermanStemmer;
-import org.tartarus.snowball.ext.HungarianStemmer;
-import org.tartarus.snowball.ext.ItalianStemmer;
-import org.tartarus.snowball.ext.NorwegianStemmer;
-import org.tartarus.snowball.ext.PortugueseStemmer;
-import org.tartarus.snowball.ext.RomanianStemmer;
-import org.tartarus.snowball.ext.RussianStemmer;
-import org.tartarus.snowball.ext.SpanishStemmer;
-import org.tartarus.snowball.ext.SwedishStemmer;
-import org.tartarus.snowball.ext.TurkishStemmer;
+import org.tartarus.snowball.ext.*;
+
+import java.nio.CharBuffer;
+import java.util.HashMap;
 
 
 public class StemmerFactory implements IStemmerFactory {

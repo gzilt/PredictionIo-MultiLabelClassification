@@ -1,4 +1,4 @@
-package io.prediction.lingpipe;
+package io.prediction.multilabel.classification;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;

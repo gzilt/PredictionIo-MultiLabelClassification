@@ -1,4 +1,4 @@
-package io.prediction.lingpipe;
+package io.prediction.multilabel.classification;
 
 public class LuceneConstants {
     public static final String CONTENTS="contents";

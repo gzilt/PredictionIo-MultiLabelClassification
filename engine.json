@@ -1,7 +1,7 @@
 {
   "id" : "default",
   "description" : "Default settings",
-  "engineFactory" : "io.prediction.lingpipe.AutoCatEngine",
+  "engineFactory" : "io.prediction.multilabel.classification.AutoCatEngine",
   "datasource" : {
     "params" : {
       "appName" : "Classify",

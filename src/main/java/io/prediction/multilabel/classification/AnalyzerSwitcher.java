@@ -1,4 +1,4 @@
-package io.prediction.lingpipe;
+package io.prediction.multilabel.classification;
 
 import org.apache.lucene.analysis.ar.ArabicAnalyzer;
 import org.apache.lucene.analysis.da.DanishAnalyzer;

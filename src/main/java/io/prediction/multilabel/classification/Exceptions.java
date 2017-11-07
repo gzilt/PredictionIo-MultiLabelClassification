@@ -1,4 +1,4 @@
-package io.prediction.lingpipe;
+package io.prediction.multilabel.classification;
 
 import org.apache.log4j.Logger;
 

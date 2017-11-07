@@ -1,4 +1,4 @@
-package io.prediction.lingpipe;
+package io.prediction.multilabel.classification;
 
 import com.google.common.base.Strings;
 import com.google.common.collect.Maps;

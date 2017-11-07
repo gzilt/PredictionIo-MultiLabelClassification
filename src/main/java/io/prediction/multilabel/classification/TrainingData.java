@@ -1,4 +1,4 @@
-package io.prediction.lingpipe;
+package io.prediction.multilabel.classification;
 
 import org.apache.predictionio.controller.SanityCheck;
 import org.apache.spark.api.java.JavaRDD;

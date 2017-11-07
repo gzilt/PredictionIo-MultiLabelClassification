@@ -1,7 +1,7 @@
-package io.prediction.lingpipe;
+package io.prediction.multilabel.classification;
 
-        import org.apache.predictionio.controller.java.LJavaServing;
-        import scala.collection.Seq;
+import org.apache.predictionio.controller.java.LJavaServing;
+import scala.collection.Seq;
 
 public class Serving extends LJavaServing<Query,PredictedResult> {
     @Override

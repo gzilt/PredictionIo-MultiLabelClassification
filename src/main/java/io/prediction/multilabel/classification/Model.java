@@ -1,4 +1,4 @@
-package io.prediction.lingpipe;
+package io.prediction.multilabel.classification;
 
 import com.aliasi.classify.DynamicLMClassifier;
 import com.aliasi.classify.JointClassifier;
