@@ -6,8 +6,10 @@ name := "PredictionIo-lingpipe-MultiLabelClassification"
 
 organization := "org.apache.predictionio"
 
+scalaVersion := "2.10.5"
+
 libraryDependencies ++= Seq(
-  "org.apache.predictionio" % "apache-predictionio-core" % "0.12.0-incubating" % "provided",
+  "org.apache.predictionio" % "apache-predictionio-core_2.10" % "0.12.0-incubating" % "provided",
   "de.julielab" % "aliasi-lingpipe" % "4.1.0",
   "org.carrot2" % "carrot2-core" % "3.11.0",
   "org.apache.spark" %% "spark-core" % "1.3.0" % "provided",
