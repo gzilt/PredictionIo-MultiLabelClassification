@@ -22,7 +22,7 @@
     "params" : {
       "maxresults" : 5,
       "ngramsize" : 3,
-      "modelbuildfilepath" : "/opt/Templates/BuildModels/",
+      "modelbuildfilepath" : "/Users/rommel.zamora/Documents/DevFiles/default/servers/PredictionIO-0.12.0/models",
       "locales" : ["en", "fr", "it"]
     }
   }

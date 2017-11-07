@@ -5,7 +5,7 @@ import org.apache.spark.api.java.JavaRDD;
 
 import java.io.Serializable;
 
-public class TrainingData implements Serializable, SanityCheck {
+public class TrainingData implements Serializable {
     private final JavaRDD<Item> Samples;
     public TrainingData(JavaRDD<Item> samples) {
         this.Samples = samples;
@@ -14,10 +14,10 @@ public class TrainingData implements Serializable, SanityCheck {
         return Samples;
     }
 
-    @Override
-    public void sanityCheck() {
-        if (Samples.isEmpty()) {
-            throw new AssertionError("Samples data is empty");
-        }
-    }
+//    @Override
+//    public void sanityCheck() {
+//        if (Samples.isEmpty()) {
+//            throw new AssertionError("Samples data is empty");
+//        }
+//    }
 }
