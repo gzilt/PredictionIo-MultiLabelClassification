@@ -1,11 +1,11 @@
 {
   "id" : "default",
   "description" : "Default settings",
-  "engineFactory" : "io.prediction.multilabel.classification.AutoCatEngine",
+  "engineFactory" : "io.prediction.multilabel.classification.MultiLabelEngine",
   "datasource" : {
     "params" : {
-      "appName" : "Classify",
-      "appId" : 3,
+      "appName" : "MultiLabelClassification",
+      "appId" : 1,
       "entityType" : "content",
       "eventType" : "Autocategory",
       "categoryField" : "CategoryReadable",

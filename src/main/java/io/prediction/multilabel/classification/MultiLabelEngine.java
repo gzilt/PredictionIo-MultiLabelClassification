@@ -9,7 +9,7 @@ import org.apache.predictionio.core.BaseEngine;
 import java.util.Collections;
 import java.util.Set;
 
-public class AutoCatEngine extends EngineFactory {
+public class MultiLabelEngine extends EngineFactory {
 
     @Override
     public BaseEngine<EmptyParams, Query, PredictedResult, Set<String>> apply() {
