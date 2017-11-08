@@ -59,14 +59,14 @@ public class Model implements PersistentModel<AlgorithmParams>, Serializable {
             Tuple2<String, Params> engineParamsGenerator = getParamsFromJsonByFieldAndClass(jval, "algorithms",Classmap, EngineLanguage.Java(), JsonExtractorOption.Gson());
             ap = (AlgorithmParams) engineParamsGenerator._2;
             CompiledClassifier  = new HashMap<>();
-                       for(int k=0; k< ap.getmodelLocales().size(); k++){
-                        int indexK = k;
-                         String fileName  = ap.getmodelbuildfilepath() + ap.getmodelLocales().get(indexK) + "_" + id;
-                         Path path = Paths.get(fileName);
-                         if (Files.exists(path)) {
-                            ModelConfig modelConfig = new ModelConfig(ap.getmodelLocales().get(indexK));
-                            CompiledClassifier.put(modelConfig,(JointClassifier<CharSequence>) AbstractExternalizable.readObject(new File(fileName)));
-                         }
+            for(int k=0; k< ap.getmodelLocales().size(); k++){
+                int indexK = k;
+                String fileName  = ap.getmodelbuildfilepath() + ap.getmodelLocales().get(indexK) + "_" + id;
+                Path path = Paths.get(fileName);
+                if (Files.exists(path)) {
+                    ModelConfig modelConfig = new ModelConfig(ap.getmodelLocales().get(indexK));
+                    CompiledClassifier.put(modelConfig,(JointClassifier<CharSequence>) AbstractExternalizable.readObject(new File(fileName)));
+                }
             }
 
             if(dsp == null){
@@ -82,7 +82,6 @@ public class Model implements PersistentModel<AlgorithmParams>, Serializable {
                 dsp = (DataSourceParams) dspengineParamsGenerator._2;
             }
 
-
             PJavaEventStore.find(
                     dsp.getAppName(),
                     OptionHelper.<String>none(),
@@ -97,7 +96,7 @@ public class Model implements PersistentModel<AlgorithmParams>, Serializable {
                     .filter((Function<Event, Boolean>) event -> isEligible(event)).collect();
 
 
-              PJavaEventStore.find(
+            PJavaEventStore.find(
                     dsp.getAppName(),
                     OptionHelper.<String>none(),
                     OptionHelper.<DateTime>none(),
@@ -137,7 +136,7 @@ public class Model implements PersistentModel<AlgorithmParams>, Serializable {
     private static boolean isEligible(Event event) {
         try {
             String category = event.properties().get(dsp.getCategoryField(), String.class);
-             if(Strings.isNullOrEmpty(category)) {
+            if(Strings.isNullOrEmpty(category)) {
                 return false;
             }
             return true;
@@ -161,7 +160,7 @@ public class Model implements PersistentModel<AlgorithmParams>, Serializable {
             for (Map.Entry<ModelConfig, DynamicLMClassifier<NGramProcessLM>> entry : ClassifierList.entrySet()) {
                 ModelConfig modelConfig = entry.getKey();
                 DynamicLMClassifier<NGramProcessLM> classifier = entry.getValue();
-                String fileName  = params.getmodelbuildfilepath() + "_" + modelConfig.getLocale() + "_" + id;
+                String fileName  = params.getmodelbuildfilepath() + modelConfig.getLocale() + "_" + id;
                 AbstractExternalizable.compileTo(classifier, new File(fileName));
             }
             return true;

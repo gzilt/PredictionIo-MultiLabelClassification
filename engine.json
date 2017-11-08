@@ -7,8 +7,8 @@
       "appName" : "MultiLabelClassification",
       "appId" : 1,
       "entityType" : "content",
-      "eventType" : "Autocategory",
-      "categoryField" : "CategoryReadable",
+      "eventType" : "AutoCategory",
+      "categoryField" : "Category",
       "queryField" : "Query",
       "localeField" : "Locale",
       "stopwordentityType" : "resource",
@@ -22,7 +22,7 @@
     "params" : {
       "maxresults" : 5,
       "ngramsize" : 3,
-      "modelbuildfilepath" : "/Users/rommel.zamora/Documents/DevFiles/default/servers/PredictionIO-0.12.0/models",
+      "modelbuildfilepath" : "/Users/rommel.zamora/Documents/DevFiles/default/servers/PredictionIO-0.12.0/engineModel/",
       "locales" : ["en", "fr", "it"]
     }
   }
